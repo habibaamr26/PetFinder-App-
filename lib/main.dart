@@ -1,9 +1,12 @@
 
 import 'package:flutter/material.dart';
 
+import 'core/dependancy_injection/dependancy_injection.dart';
+import 'core/route/app_route.dart';
 import 'feature/onboarding/presentation/onboarding_screen.dart';
 
 void main() {
+  initDependencyInjection();
   runApp(const MyApp());
 }
 
@@ -12,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
