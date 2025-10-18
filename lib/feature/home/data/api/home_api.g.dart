@@ -50,7 +50,7 @@ class _HomeApi implements HomeApi {
     try {
       _value = _result.data!
           .map(
-            (dynamic i) => CatApiResponse.fromJson(i as List),
+            (dynamic i) => CatApiResponse.fromJson(i as Map<String, dynamic>),
           )
           .toList();
     } on Object catch (e, s) {

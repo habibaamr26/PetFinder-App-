@@ -3,28 +3,17 @@ import 'package:json_annotation/json_annotation.dart';
 part 'response_model.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class CatApiResponse {
-  final List<CatImage> breeds;
 
-  CatApiResponse({required this.breeds});
-
-  factory CatApiResponse.fromJson(List<dynamic> json) =>
-      CatApiResponse(breeds: json.map((e) => CatImage.fromJson(e as Map<String, dynamic>)).toList());
-
-  Map<String, dynamic> toJson() => {
-    'breeds': breeds.map((e) => e.toJson()).toList(),
-  };
-}
 
 @JsonSerializable(explicitToJson: true)
-class CatImage {
+class CatApiResponse {
   final String id;
   final String url;
   final int width;
   final int height;
   final List<CatBreed> breeds;
 
-  CatImage({
+  CatApiResponse({
     required this.id,
     required this.url,
     required this.width,
@@ -32,8 +21,8 @@ class CatImage {
     required this.breeds,
   });
 
-  factory CatImage.fromJson(Map<String, dynamic> json) => _$CatImageFromJson(json);
-  Map<String, dynamic> toJson() => _$CatImageToJson(this);
+  factory CatApiResponse.fromJson(Map<String, dynamic> json) => _$CatApiResponseFromJson(json);
+  Map<String, dynamic> toJson() => _$CatApiResponseToJson(this);
 }
 
 @JsonSerializable()

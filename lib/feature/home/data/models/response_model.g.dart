@@ -8,33 +8,23 @@ part of 'response_model.dart';
 
 CatApiResponse _$CatApiResponseFromJson(Map<String, dynamic> json) =>
     CatApiResponse(
+      id: json['id'] as String,
+      url: json['url'] as String,
+      width: (json['width'] as num).toInt(),
+      height: (json['height'] as num).toInt(),
       breeds: (json['breeds'] as List<dynamic>)
-          .map((e) => CatImage.fromJson(e as Map<String, dynamic>))
+          .map((e) => CatBreed.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$CatApiResponseToJson(CatApiResponse instance) =>
     <String, dynamic>{
+      'id': instance.id,
+      'url': instance.url,
+      'width': instance.width,
+      'height': instance.height,
       'breeds': instance.breeds.map((e) => e.toJson()).toList(),
     };
-
-CatImage _$CatImageFromJson(Map<String, dynamic> json) => CatImage(
-  id: json['id'] as String,
-  url: json['url'] as String,
-  width: (json['width'] as num).toInt(),
-  height: (json['height'] as num).toInt(),
-  breeds: (json['breeds'] as List<dynamic>)
-      .map((e) => CatBreed.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
-
-Map<String, dynamic> _$CatImageToJson(CatImage instance) => <String, dynamic>{
-  'id': instance.id,
-  'url': instance.url,
-  'width': instance.width,
-  'height': instance.height,
-  'breeds': instance.breeds.map((e) => e.toJson()).toList(),
-};
 
 CatBreed _$CatBreedFromJson(Map<String, dynamic> json) => CatBreed(
   id: json['id'] as String,

@@ -8,6 +8,7 @@ class HomeCubit extends Cubit<HomeState> {
   late HomeRepository homeRepository;
   HomeCubit({required this.homeRepository}) : super(HomeInitialState());
 
+
   void handleGetCatImages() async {
     emit(HomeLoadingState());
     final result = await homeRepository.getCatImages();

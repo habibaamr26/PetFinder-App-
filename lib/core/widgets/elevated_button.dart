@@ -69,7 +69,7 @@ class CustomElevatedButton extends StatelessWidget {
             Text(
               text,
               style: textStyle ??
-                  AppTextStyles.buttonLarge.copyWith(
+                  AppTextStyles.textStyleBold32.copyWith(
                     color: textColor ?? AppColors.white,
                   ),
             ),
@@ -78,7 +78,7 @@ class CustomElevatedButton extends StatelessWidget {
             : Text(
           text,
           style: textStyle ??
-              AppTextStyles.buttonLarge.copyWith(
+              AppTextStyles.textStyleBold32.copyWith(
                 color: textColor ?? AppColors.white,
               ),
         ),
