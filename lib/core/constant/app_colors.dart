@@ -11,6 +11,7 @@ class AppColors {
   // Accent Colors
   static const Color accent = Color(0xFFFF6B9D);
   static const Color accentPurple = Color(0xFF9C4CFF);
+  static const Color imageBckground = Color(0xFFE1F8F9);
 
   // Neutral Colors
   static const Color white = Color(0xFFFFFFFF);

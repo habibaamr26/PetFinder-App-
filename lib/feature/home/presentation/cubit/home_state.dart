@@ -17,3 +17,5 @@ class HomeErrorState extends HomeState {
 
   HomeErrorState({required this.errorMessage});
 }
+
+class HomeChangeBottomNavState extends HomeState {}

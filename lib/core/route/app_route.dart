@@ -18,7 +18,7 @@ class RouteGenerator {
           builder: (_) => BlocProvider(
             create: (BuildContext context) =>
                 HomeCubit(homeRepository: getIt())..handleGetCatImages(),
-            child:  HomeScreen(),
+            child:  Home(),
           ),
         );
 
