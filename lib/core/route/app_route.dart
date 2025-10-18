@@ -18,18 +18,10 @@ class RouteGenerator {
           builder: (_) => BlocProvider(
             create: (BuildContext context) =>
                 HomeCubit(homeRepository: getIt())..handleGetCatImages(),
-            child:  Home(),
+            child: Home(),
           ),
         );
 
-      /*case AppRoutes.petDetails:
-        final pet = settings.arguments as Pet;
-        return MaterialPageRoute(
-          builder: (_) => PetDetailsScreen(pet: pet),
-        );
-
-      case AppRoutes.favorites:
-        return MaterialPageRoute(builder: (_) => const FavoritesScreen());*/
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

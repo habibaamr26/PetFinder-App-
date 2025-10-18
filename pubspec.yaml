@@ -42,6 +42,7 @@ dependencies:
   dio: ^5.9.0
   flutter_bloc: ^9.1.1
   flutter_svg: ^2.2.1
+  mockito: ^5.5.1
 
 dev_dependencies:
   flutter_test:
